@@ -11,3 +11,4 @@ Requirements & environment:
 
 Refer：
 - https://github.com/redknotmiaoyuqiao/MMPlayer;
+- https://sourceforge.net/projects/simplestmediaplay;
