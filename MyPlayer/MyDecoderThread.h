@@ -41,6 +41,8 @@ public:
     int timebaseNum = 0;
     int timebaseDen = 0;
 
+    AVCodecContext* getCodecCtx();
+
 private:
     AVFormatContext* avFormatCtx = nullptr;
     CodecType codectype;

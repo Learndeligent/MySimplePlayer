@@ -39,6 +39,9 @@ void MyDecoderThread::run()
 #endif
     while(!stopFlag) {
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        if (SizeFrameQueue() > 20) {
+            continue;
+        }
 
         // step 1 : take a packet from the queue
         AVPacket* p_pkt = nullptr;
@@ -187,4 +190,9 @@ int MyDecoderThread::popFrame(AVFrame ** p_frame)
 int MyDecoderThread::SizeFrameQueue()
 {
     return FrameQueue.size();
+}
+
+AVCodecContext* MyDecoderThread::getCodecCtx()
+{
+    return codecCtx;
 }

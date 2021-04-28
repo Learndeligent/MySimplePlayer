@@ -78,7 +78,7 @@ int MyPlayer::StartDecoder()
 
 int MyPlayer::StartController()
 {
-    controller->Start();
+    controller->myrun();
     return 0;
 }
 

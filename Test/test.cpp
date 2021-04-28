@@ -6,7 +6,7 @@
 
 int main()
 {
-    std::string input_file = "/Users/feihong/Desktop/firework.mp4";
+    std::string input_file = "/Users/feihong/Desktop/IMG_0221.mov";
 
     // step 0 : create a player
     MyPlayer* myplayer = new MyPlayer(input_file);
@@ -28,10 +28,11 @@ int main()
     // step 5 : start the decoder
     myplayer->StartDecoder();
 
+    //std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     // step 6 : start the controller
     myplayer->StartController();
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     myplayer->StopAll();
 
